@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tambola Caller – clean Tambola / Housie number caller</title>
+  <meta name="description" content="A clean, simple Tambola (Housie) number caller for Android. Big numbers, voice calls in English and Hindi, a full 1–90 board, auto-call and game history." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="./"><span class="dot">90</span>Tambola Caller</a>
+    <nav class="links">
+      <a class="wide" href="#features">Features</a>
+      <a class="wide" href="#install">Install</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div>
+        <h1>The Tambola caller that stays out of your way.</h1>
+        <p class="lead">Big numbers, a clear voice and a full 1–90 board. Built for family game nights, not for clutter.</p>
+        <a class="btn" href="https://github.com/funsparktv-ai/tambola/releases/latest/download/TambolaCaller.apk" id="download">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1zM5 19h14a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2z"/></svg>
+          Download for Android
+        </a>
+        <p class="meta">Free · Android 7.0 and up · APK, about 38 MB</p>
+      </div>
+
+      <div class="phone" aria-hidden="true">
+        <div class="ball">22</div>
+        <div class="call">Two little ducks</div>
+        <div class="board" id="board"></div>
+        <div class="next">Next</div>
+      </div>
+    </div>
+
+    <section id="features">
+      <div class="wrap">
+        <h2>Everything a caller needs</h2>
+        <div class="grid">
+          <div class="card"><div class="icon">🔊</div><h3>Calls out loud</h3><p>Every number announced in English or Hindi, with the traditional calls like “Two little ducks, 22”.</p></div>
+          <div class="card"><div class="icon">🎯</div><h3>Full 1–90 board</h3><p>See every called number at a glance, plus the last five. Tap the big number to hear it again.</p></div>
+          <div class="card"><div class="icon">⏯️</div><h3>Auto-call</h3><p>Let it call by itself every few seconds, or tap Next. Made a mistake? Undo takes it back.</p></div>
+          <div class="card"><div class="icon">💾</div><h3>Never lose a game</h3><p>Close the app mid-game and pick up exactly where you left off. The screen stays awake while you play.</p></div>
+          <div class="card"><div class="icon">🌙</div><h3>Light and dark</h3><p>Looks good day or night, with extra colour themes in Premium.</p></div>
+          <div class="card"><div class="icon">⏱️</div><h3>Ad-free when you want</h3><p>Ads only appear between games, never while numbers are being called. Watch one short video for ad-free time.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install">
+      <div class="wrap">
+        <h2>How to install</h2>
+        <div class="card">
+          <ol class="steps">
+            <li>Tap <a href="https://github.com/funsparktv-ai/tambola/releases/latest/download/TambolaCaller.apk">Download for Android</a> on your phone.</li>
+            <li>Open the downloaded <b>TambolaCaller.apk</b> from your notifications or the Files app.</li>
+            <li>If Android asks, allow your browser or Files app to <b>install unknown apps</b>.</li>
+            <li>Tap <b>Install</b>, then open <b>Tambola Caller</b>.</li>
+          </ol>
+          <p class="note">To update, download and install the new version the same way. Your games and settings are kept.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Tambola Caller</span>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:namish.malhotra.2013@gmail.com">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    // Little demo board for the phone mockup.
+    const called = new Set([1, 5, 10, 22, 28, 34, 40, 43, 57, 69, 77, 88]);
+    const board = document.getElementById('board');
+    for (let n = 1; n <= 90; n++) {
+      const s = document.createElement('span');
+      s.textContent = n;
+      if (n === 22) s.className = 'now';
+      else if (called.has(n)) s.className = 'on';
+      board.appendChild(s);
+    }
+  </script>
+</body>
+</html>
