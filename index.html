@@ -4,7 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tambola Caller – clean Tambola / Housie number caller</title>
-  <meta name="description" content="A clean, simple Tambola (Housie) number caller for Android. Big numbers, voice calls in English and Hindi, a full 1–90 board, auto-call and game history." />
+  <meta name="description" content="A clean Tambola (Housie) number caller for Android. Calls numbers out loud in English and Hindi, shows a full 1–90 board, checks claims, shares the board and never interrupts a game with ads." />
+  <meta property="og:title" content="Tambola Caller" />
+  <meta property="og:description" content="Big numbers, a clear voice, a full 1–90 board and a claim checker. Free for Android." />
+  <meta property="og:image" content="https://funsparktv-ai.github.io/Tambola/logo.png" />
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="stylesheet" href="styles.css" />
@@ -13,6 +16,7 @@
   <header class="wrap nav">
     <a class="brand" href="./"><img class="mark" src="favicon.png" alt="" width="34" height="34" />Tambola Caller</a>
     <nav class="links">
+      <a class="wide" href="#screens">Screens</a>
       <a class="wide" href="#features">Features</a>
       <a class="wide" href="#install">Install</a>
       <a href="privacy.html">Privacy</a>
@@ -25,33 +29,84 @@
       <div>
         <img class="hero-logo" src="logo.png" alt="Tambola" width="220" height="217" />
         <h1>The Tambola caller that stays out of your way.</h1>
-        <p class="lead">Big numbers, a clear voice and a full 1–90 board. Built for family game nights, not for clutter.</p>
+        <p class="lead">Big numbers, a clear voice and a full 1–90 board. Check claims in seconds and share the board with the family group.</p>
         <a class="btn" href="https://github.com/funsparktv-ai/Tambola/releases/latest/download/TambolaCaller.apk" id="download">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1zM5 19h14a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2z"/></svg>
           Download for Android
         </a>
-        <p class="meta">Free · Android 7.0 and up · APK, about 38 MB</p>
+        <p class="meta">Free · Android 7.0 and up · about 39 MB · <a href="https://github.com/funsparktv-ai/Tambola/releases">What’s new</a></p>
       </div>
 
-      <div class="phone" aria-hidden="true">
-        <div class="ball">22</div>
-        <div class="call">Two little ducks</div>
-        <div class="board" id="board"></div>
-        <div class="next">Next</div>
-      </div>
+      <figure class="shot">
+        <img src="screens/game.webp" alt="A game in progress: the big orange ball shows 22, 'Two little ducks', with the 1–90 board below" width="390" height="844" />
+      </figure>
     </div>
+
+    <section id="screens">
+      <div class="wrap">
+        <h2>See it in action</h2>
+        <p class="section-lead">Real screens from the app. Swipe for more.</p>
+        <div class="gallery">
+          <figure>
+            <div class="shot"><img src="screens/home.webp" alt="Home screen with Play, Settings and Premium" loading="lazy" width="390" height="844" /></div>
+            <figcaption>Home<span>One tap to start</span></figcaption>
+          </figure>
+          <figure>
+            <div class="shot"><img src="screens/game.webp" alt="Game screen with the current number, last five calls and the full board" loading="lazy" width="390" height="844" /></div>
+            <figcaption>Calling<span>Big number, last five, full board</span></figcaption>
+          </figure>
+          <figure>
+            <div class="shot"><img src="screens/claim.webp" alt="Claim checker showing a valid Early Five" loading="lazy" width="390" height="844" /></div>
+            <figcaption>Check a claim<span>Valid or not, in seconds</span></figcaption>
+          </figure>
+          <figure>
+            <div class="shot"><img src="screens/hindi.webp" alt="Game screen in Hindi mode showing 'दो बत्तख' under 22" loading="lazy" width="390" height="844" /></div>
+            <figcaption>हिन्दी calls<span>“दो बत्तख… 22”</span></figcaption>
+          </figure>
+          <figure>
+            <div class="shot"><img src="screens/settings.webp" alt="Settings with dark mode, colour themes and voice options" loading="lazy" width="390" height="844" /></div>
+            <figcaption>Settings<span>Themes, voice, speed</span></figcaption>
+          </figure>
+          <figure>
+            <div class="shot"><img src="screens/premium.webp" alt="Premium screen: watch 3 videos for 20 minutes of Premium" loading="lazy" width="390" height="844" /></div>
+            <figcaption>Premium<span>3 videos = 20 minutes</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
     <section id="features">
       <div class="wrap">
         <h2>Everything a caller needs</h2>
         <div class="grid">
-          <div class="card"><div class="icon">🔊</div><h3>Calls out loud</h3><p>Every number announced in English or Hindi, with the traditional calls like “Two little ducks, 22”.</p></div>
-          <div class="card"><div class="icon">🎯</div><h3>Full 1–90 board</h3><p>See every called number at a glance, plus the last five. Tap the big number to hear it again.</p></div>
-          <div class="card"><div class="icon">⏯️</div><h3>Auto-call</h3><p>Let it call by itself every few seconds, or tap Next. Made a mistake? Undo takes it back.</p></div>
-          <div class="card"><div class="icon">💾</div><h3>Never lose a game</h3><p>Close the app mid-game and pick up exactly where you left off. The screen stays awake while you play.</p></div>
-          <div class="card"><div class="icon">🌙</div><h3>Light and dark</h3><p>Looks good day or night, with extra colour themes in Premium.</p></div>
-          <div class="card"><div class="icon">⏱️</div><h3>Ad-free when you want</h3><p>Ads only appear between games, never while numbers are being called. Watch one short video for ad-free time.</p></div>
+          <div class="card"><div class="icon">🔊</div><h3>Calls out loud</h3><p>Every number announced in English or Hindi, with traditional calls like “Two little ducks… 22” or “पंद्रह अगस्त… 15”. Pick any voice on your phone.</p></div>
+          <div class="card"><div class="icon">🎯</div><h3>Full 1–90 board</h3><p>Every called number at a glance, plus the last five. Tap the big number to hear it again.</p></div>
+          <div class="card"><div class="icon">⏯️</div><h3>Auto-call &amp; Undo</h3><p>Let it call by itself every few seconds, or tap Next. Called one by mistake? Undo takes it back.</p></div>
+          <div class="card"><div class="icon">✅</div><h3>Check a claim</h3><p>Early Five, lines, Four corners or Full house: tap the player’s numbers and know instantly if it’s valid, and which call completed it.</p></div>
+          <div class="card"><div class="icon">📤</div><h3>Share the board</h3><p>Send a picture of the board to WhatsApp or any app, so everyone can check their tickets.</p></div>
+          <div class="card"><div class="icon">💾</div><h3>Never lose a game</h3><p>Close the app mid-game and pick up where you left off. The screen stays awake while you play.</p></div>
+          <div class="card"><div class="icon">🌙</div><h3>Light, dark &amp; themes</h3><p>Looks great day or night, with Ocean, Forest, Rose and Sunset colour themes in Premium.</p></div>
+          <div class="card"><div class="icon">⏱️</div><h3>Ads stay out of the game</h3><p>Ads only appear before or after a game, never while numbers are being called. One short video gives you 5 ad-free minutes.</p></div>
+          <div class="card"><div class="icon">🔔</div><h3>Always up to date</h3><p>The app tells you when a new version is out. Updating keeps all your games and settings.</p></div>
         </div>
+      </div>
+    </section>
+
+    <section id="premium">
+      <div class="wrap premium">
+        <div>
+          <h2>Premium, for free</h2>
+          <p class="section-lead">Watch 3 short videos and unlock everything for 20 minutes, enough for a whole game. Your progress is saved if you stop.</p>
+          <div class="pill-row" aria-hidden="true"><span class="dot on">✓</span><span class="dot on">✓</span><span class="dot">3</span></div>
+          <ul class="perks">
+            <li>No ads while Premium is on</li>
+            <li>Colour themes: Ocean, Forest, Rose, Sunset</li>
+            <li>Voice speed and pitch</li>
+            <li>Game history with every number called</li>
+            <li>Your own call phrase for any number</li>
+          </ul>
+        </div>
+        <figure class="shot"><img src="screens/premium.webp" alt="" loading="lazy" width="390" height="844" /></figure>
       </div>
     </section>
 
@@ -62,11 +117,11 @@
           <ol class="steps">
             <li>Tap <a href="https://github.com/funsparktv-ai/Tambola/releases/latest/download/TambolaCaller.apk">Download for Android</a> on your phone.</li>
             <li>Open the downloaded <b>TambolaCaller.apk</b> from your notifications or the Files app.</li>
-            <li>If Android asks, allow your browser or Files app to <b>install unknown apps</b>.</li>
+            <li>If Android asks, allow your browser or Files app to <b>install unknown apps</b>. If Play Protect warns you, tap <b>More details → Install anyway</b>: it does that for any app not from the Play Store.</li>
             <li>Tap <b>Install</b>, then open <b>Tambola Caller</b>.</li>
           </ol>
-          <p class="note">To update, download and install the new version the same way. Your games and settings are kept.</p>
-          <p class="note"><b>Installed version 1.0.0?</b> Uninstall it once before installing 1.0.1 or later. That release used a temporary signature, so Android won’t update it directly. After this, updates install normally.</p>
+          <p class="note">To update, install the new version the same way, or tap <b>Update</b> when the app tells you a new version is out. Your games and settings are kept.</p>
+          <p class="note"><b>Installed version 1.0.0?</b> Uninstall it once before installing a newer version. That release used a temporary signature, so Android won’t update it directly.</p>
         </div>
       </div>
     </section>
@@ -80,18 +135,5 @@
       <a href="mailto:namish.malhotra.2013@gmail.com">Contact</a>
     </div>
   </footer>
-
-  <script>
-    // Little demo board for the phone mockup.
-    const called = new Set([1, 5, 10, 22, 28, 34, 40, 43, 57, 69, 77, 88]);
-    const board = document.getElementById('board');
-    for (let n = 1; n <= 90; n++) {
-      const s = document.createElement('span');
-      s.textContent = n;
-      if (n === 22) s.className = 'now';
-      else if (called.has(n)) s.className = 'on';
-      board.appendChild(s);
-    }
-  </script>
 </body>
 </html>

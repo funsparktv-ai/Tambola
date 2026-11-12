@@ -75,6 +75,31 @@ a { color: var(--accent); }
 .phone .board span.now { background: var(--ball); color: #fff; border-color: transparent; font-weight: 800; }
 .phone .next { margin-top: auto; width: 100%; background: var(--accent); color: #fff; border-radius: 14px; text-align: center; font-weight: 800; padding: 12px; }
 
+/* real app screenshots in a phone frame */
+.shot {
+  margin: 0; justify-self: center; width: min(280px, 100%);
+  border-radius: 34px; padding: 9px; background: #07050f;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 28px 60px -24px rgba(60, 30, 160, .55);
+}
+.shot img { display: block; width: 100%; height: auto; aspect-ratio: 390 / 844; border-radius: 26px; }
+.gallery {
+  display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 8px 4px 24px; margin: 0 -4px; scrollbar-width: thin;
+}
+.gallery figure { flex: 0 0 220px; scroll-snap-align: start; margin: 0; }
+.gallery .shot { width: 220px; }
+.gallery figcaption { text-align: center; margin-top: 12px; font-weight: 700; font-size: 15px; }
+.gallery figcaption span { display: block; font-weight: 400; color: var(--muted); font-size: 13px; }
+.section-lead { color: var(--muted); margin: -8px 0 20px; max-width: 60ch; }
+
+/* premium */
+.premium { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center; }
+.pill-row { display: flex; gap: 10px; margin: 16px 0; }
+.pill-row .dot { width: 40px; height: 40px; border-radius: 50%; border: 2px solid #f6c453; display: grid; place-items: center; font-weight: 800; color: #f6c453; }
+.pill-row .dot.on { background: #f6c453; color: #1b1000; }
+.perks { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.perks li::before { content: "✓"; color: #f6c453; font-weight: 800; margin-right: 8px; }
+
 /* sections */
 section { padding: 40px 0; }
 h2 { font-size: 28px; letter-spacing: -.5px; margin: 0 0 20px; }
@@ -101,6 +126,9 @@ footer a { color: var(--muted); }
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; padding-block-start: 24px; gap: 32px; }
   .grid { grid-template-columns: 1fr; }
+  .premium { grid-template-columns: 1fr; }
+  .gallery figure { flex-basis: 70%; }
+  .gallery .shot { width: 100%; }
   .nav .links { gap: 14px; font-size: 14px; }
   .nav .links .wide { display: none; }
   .btn { width: 100%; justify-content: center; }
